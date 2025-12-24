@@ -1,0 +1,384 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaur 1.0: The Universal AI Automation Platform | Navchetna</title>
+    <link rel="icon" href="/assets/logo.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" crossorigin="" href="/assets/css/styles.css">
+</head>
+<body>
+    <div id="root">
+        <header class="fixed top-0 left-0 right-0 z-50 py-4 px-0 transition-all duration-300 ease-in-out backdrop-blur-xl border-b border-border/30">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="relative"><a class="block" href="/"><img src="/assets/logo.svg" alt="Logo" class="h-9 w-auto transition-all p-1 hover:bg-neutral-900 hover:dark:bg-neutral-900 dark:invert-0 invert"></a></div>
+                    <nav class="hidden md:flex items-center space-x-2">
+                        <a class="text-xs text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 px-4 py-2 rounded-md" href="/about">About</a>
+                        <a class="text-xs text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 px-4 py-2 rounded-md" href="/services">Services</a>
+                        <a class="text-xs text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 px-4 py-2 rounded-md" href="/products">Products</a>
+                        <a class="text-xs text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 px-4 py-2 rounded-md" href="/career">Career</a>
+                        <a class="text-xs items-center gap-1 px-4 py-2 rounded-md hidden dark:bg-blue-600/20 text-blue-600 dark:text-blue-400 lg:inline-flex" href="/news">News</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative flex h-6 w-auto bg-neutral-50 dark:bg-neutral-900 px-0.5 py-1 rounded-full border border-neutral-200/50 dark:border-neutral-800 hover:border-neutral-200 dark:hover:border-neutral-700 theme-toggle light">
+                        <button class="relative -top-[1px] -left-[1px] z-10 flex items-center justify-center h-4 w-6 rounded-full transition-colors text-neutral-900 dark:text-white" aria-label="Light mode" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-3 w-3">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2"></path>
+                                <path d="M12 20v2"></path>
+                                <path d="m4.93 4.93 1.41 1.41"></path>
+                                <path d="m17.66 17.66 1.41 1.41"></path>
+                                <path d="M2 12h2"></path>
+                                <path d="M20 12h2"></path>
+                                <path d="m6.34 17.66-1.41 1.41"></path>
+                                <path d="m19.07 4.93-1.41 1.41"></path>
+                            </svg>
+                        </button>
+                        <button class="relative -top-[1px] left-[1px] z-10 flex items-center justify-center h-4 w-6 rounded-full transition-colors text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="System theme" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor h-3 w-3">
+                                <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                                <line x1="8" x2="16" y1="21" y2="21"></line>
+                                <line x1="12" x2="12" y1="17" y2="21"></line>
+                            </svg>
+                        </button>
+                        <button class="relative -top-[1px] left-[1px] z-10 flex items-center justify-center h-4 w-6 rounded-full transition-colors text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Dark mode" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon h-3 w-3">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="/contact"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl font-medium duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent h-10 px-4 py-2 text-xs text-muted-foreground hover:text-foreground transition-colors">Contact</button></a>
+                </div>
+            </div>
+        </header>
+        
+        <div class="pt-20 min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300">
+            <main class="flex-1 transition-all duration-300 p-8">
+                <div class="max-w-4xl mx-auto">
+                    <nav class="mb-8">
+                        <ol class="flex items-center space-x-2 text-sm text-gray-500 dark:text-neutral-500">
+                            <li><a href="/news" class="hover:text-gray-700 dark:hover:text-neutral-300">News</a></li>
+                            <li><span class="mx-2">/</span></li>
+                            <li><a href="/news/product" class="hover:text-gray-700 dark:hover:text-neutral-300">Product Launches</a></li>
+                            <li><span class="mx-2">/</span></li>
+                            <li class="text-gray-900 dark:text-white">Plaur Research</li>
+                        </ol>
+                    </nav>
+
+                    <header class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium">Product Launch</span>
+                            <span class="ml-4 text-sm text-gray-500 dark:text-neutral-500">January 8, 2025</span>
+                        </div>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                            Plaur 1.0: The Universal AI Automation Platform
+                        </h1>
+                        <p class="text-xl text-gray-600 dark:text-neutral-400 leading-relaxed">
+                            Plaur 1.0 represents a paradigm shift in AI-driven automation. While most tools specialize in either workflow automation or content creation, Plaur unifies these domains into a singular, intelligent framework.
+                        </p>
+                        <div class="flex items-center justify-between mt-6 pt-6 border-t border-gray-200 dark:border-neutral-800">
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-500 dark:text-neutral-500">By Navchetna &amp; Tantrix Solutions</span>
+                                <span class="text-sm text-gray-500 dark:text-neutral-500">•</span>
+                                <span class="text-sm text-gray-500 dark:text-neutral-500">15 min read</span>
+                            </div>
+                            <a href="https://plaur.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                Try Now
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </header>
+
+                    <article class="prose dark:prose-invert max-w-none">
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Abstract</h2>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Plaur 1.0 represents a paradigm shift in the domain of artificial intelligence-driven automation. While most contemporary tools specialize in either workflow automation or content creation, Plaur unifies these domains into a singular, intelligent framework. By combining large-scale workflow orchestration, prompt-based intent recognition, and multi-modal content generation, Plaur establishes itself as an all-in-one solution for individuals, enterprises, and communities.
+                            </p>
+                            <div class="border-l-4 border-blue-500 pl-6 py-4 my-6 bg-blue-50 dark:bg-blue-900/10 rounded-r-lg">
+                                <p class="text-sm font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">Key Innovation</p>
+                                <p class="text-gray-700 dark:text-neutral-300">Unified automation engine combining workflow orchestration, AI content creation, and prompt-to-execution paradigm in a single platform.</p>
+                            </div>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">System Architecture</h2>
+                            
+                            <h3 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Universal Automation Core</h3>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Plaur's automation core supports comprehensive workflow management:
+                            </p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 dark:text-neutral-300">
+                                <li>End-to-end workflows without coding</li>
+                                <li>API integrations with cloud services, business tools, and data systems</li>
+                                <li>Dynamic triggers and scheduling to support adaptive business logic</li>
+                            </ul>
+
+                            <h3 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Content Intelligence Layer</h3>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Built upon proprietary LLMs and creative generation engines:
+                            </p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 dark:text-neutral-300">
+                                <li>Automatic generation of blogs, social posts, campaign materials, and emails</li>
+                                <li>Brand-aware visual generation for marketing</li>
+                                <li>Adaptive messaging that aligns with context and audience</li>
+                            </ul>
+
+                            <h3 class="text-xl font-medium text-gray-900 dark:text-white mb-3">Prompt-to-Action Framework</h3>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Plaur introduces a Prompt-Oriented Execution Model (POEM):
+                            </p>
+                            <ul class="list-disc pl-6 mb-6 text-gray-700 dark:text-neutral-300">
+                                <li>Natural language prompt parsed into an intent tree</li>
+                                <li>System maps intent to workflows and services</li>
+                                <li>Tasks executed autonomously, with optional human approval stages</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Performance Benchmarks</h2>
+                            <div class="bg-gray-50 dark:bg-neutral-900/30 rounded-lg p-6 mb-6">
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Empirical Results</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h5 class="font-medium text-gray-900 dark:text-white mb-2">Automation Efficiency</h5>
+                                        <ul class="text-sm text-gray-600 dark:text-neutral-400 space-y-1">
+                                            <li>• Workflow Speed: 3x faster than leading platforms</li>
+                                            <li>• Manual Labor Reduction: 42% in enterprise pilots</li>
+                                            <li>• Operational Costs: Up to 60% reduction</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium text-gray-900 dark:text-white mb-2">Content &amp; Engagement</h5>
+                                        <ul class="text-sm text-gray-600 dark:text-neutral-400 space-y-1">
+                                            <li>• Engagement Rates: +48% improvement in AI campaigns</li>
+                                            <li>• Creator Productivity: 3.1x increase</li>
+                                            <li>• Scalability: 500+ concurrent workflows tested</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Implementation Example</h2>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Plaur's API enables seamless automation and content creation:
+                            </p>
+                            <div class="bg-gray-900 dark:bg-neutral-800 rounded-lg p-6 mb-6">
+                                <pre class="text-green-400 text-sm overflow-x-auto"><code>// Plaur Universal Automation API
+const plaur = new PlaurClient({
+  apiKey: "your-api-key",
+  version: "1.0"
+});
+
+// Automate LinkedIn Campaign
+await plaur.postToSocial({
+  platform: "LinkedIn",
+  content: "Excited to announce our new global partnership.",
+  schedule: "2025-09-20T10:00:00Z"
+});
+
+// Generate and execute workflow
+const workflow = await plaur.createWorkflow({
+  trigger: "new_lead",
+  actions: [
+    "send_welcome_email",
+    "create_crm_entry",
+    "schedule_followup"
+  ]
+});
+</code></pre>
+                            </div>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Research Methodology</h2>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Our evaluation methodology included comprehensive testing across multiple scenarios:
+                            </p>
+                            <ol class="list-decimal pl-6 mb-6 text-gray-700 dark:text-neutral-300 space-y-2">
+                                <li>Controlled laboratory environment with simulated network conditions</li>
+                                <li>Real-world deployment across 15 geographic regions</li>
+                                <li>A/B testing with 50,000+ concurrent users</li>
+                                <li>Cross-platform compatibility validation</li>
+                                <li>Long-term stability and performance monitoring</li>
+                            </ol>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Future Directions</h2>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Our ongoing research focuses on several key areas for further improvement:
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-white dark:bg-neutral-900/30 border border-gray-200 dark:border-neutral-800 rounded-lg p-6">
+                                    <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Edge Computing Integration</h4>
+                                    <ul class="text-sm text-gray-600 dark:text-neutral-400 space-y-2">
+                                        <li>• CDN optimization algorithms</li>
+                                        <li>• Edge-based transcoding</li>
+                                        <li>• Latency reduction techniques</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white dark:bg-neutral-900/30 border border-gray-200 dark:border-neutral-800 rounded-lg p-6">
+                                    <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-3">AI-Powered Analytics</h4>
+                                    <ul class="text-sm text-gray-600 dark:text-neutral-400 space-y-2">
+                                        <li>• Predictive quality assessment</li>
+                                        <li>• User behavior modeling</li>
+                                        <li>• Content-aware optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Take a look</h2>
+                            <div class="bg-white dark:bg-neutral-900/30 border border-gray-200 dark:border-neutral-800 rounded-2xl overflow-hidden">
+                                <iframe src="https://plaur.com" class="w-full h-96 rounded-2xl" title="Plaur Platform" allowfullscreen=""></iframe>
+                            </div>
+                        </section>
+
+                        <section class="mb-8">
+                            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Conclusion</h2>
+                            <p class="text-gray-700 dark:text-neutral-300 leading-relaxed mb-4">
+                                Plaur 1.0 represents the culmination of years of research and development in AI-driven automation. By unifying content creation, workflow orchestration, and intent recognition, it creates a system that is not only efficient but transformative. In essence, Plaur 1.0 is not merely a platform it is a universal intelligence layer for the digital age, designed to empower users to automate, create, and scale operations effortlessly.
+                            </p>
+                            <div class="bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800/20 rounded-lg p-6">
+                                <h4 class="text-lg font-medium text-blue-900 dark:text-blue-300 mb-3">Experience Plaur</h4>
+                                <p class="text-blue-800 dark:text-blue-400 mb-4">Try our universal AI automation platform and transform your workflow efficiency.</p>
+                                <a href="https://plaur.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300">
+                                    Access Demo
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4">
+                                        <path d="M7 7h10v10"></path>
+                                        <path d="M7 17 17 7"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </section>
+                    </article>
+
+                    <section class="mt-12 pt-8 border-t border-gray-200 dark:border-neutral-800">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Related Articles</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <a href="../osmium" class="block p-6 bg-white dark:bg-neutral-900/30 border border-gray-200 dark:border-neutral-800 rounded-lg hover:border-purple-300 dark:hover:border-purple-700 transition-colors">
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded text-xs font-medium">Product Launch</span>
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mt-3 mb-2">Osmium 2.0 AI Platform</h4>
+                                <p class="text-gray-600 dark:text-neutral-400 text-sm">Revolutionary AI platform with enhanced ML capabilities</p>
+                            </a>
+                            <a href="../natraj" class="block p-6 bg-white dark:bg-neutral-900/30 border border-gray-200 dark:border-neutral-800 rounded-lg hover:border-emerald-300 dark:hover:border-emerald-700 transition-colors">
+                                <span class="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded text-xs font-medium">Feature Update</span>
+                                <h4 class="text-lg font-medium text-gray-900 dark:text-white mt-3 mb-2">Natraj Creative Suite Enhancement</h4>
+                                <p class="text-gray-600 dark:text-neutral-400 text-sm">Advanced design tools with AI-powered assistance</p>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            <footer class="border-t border-gray-200 dark:border-neutral-800 mt-16 py-8">
+                        <div class="container px-4 md:px-6">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-800 dark:text-white mb-4">Product</h3>
+                                    <ul class="space-y-2">
+                                        <li><a class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="https://osmium.co.in">Osmium</a></li>
+                                        <li><a class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="https://natraj.navchetna.tech">Natraj</a></li>
+                                        <li><a class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="https://plaur.com">Plaur</a></li>
+                                        <li><a class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="/products/#kriya">Kriya</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-800 dark:text-white mb-4">Resources</h3>
+                                    <ul class="space-y-2">
+                                        <li><a class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="https://doc.navchetna.tech">Documentation</a></li>
+                                        <li><a class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="/learn/video-tutorials">Tutorials</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-800 dark:text-white mb-4">APIs</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="https://osmium.co.in/channels/API/?version=Vidyanukriti" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">Vidyānukriti</a>
+                                        </li>
+                                        <li><a href="https://osmium.co.in/channels/API?version=Manobal" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">Manobal
+                                              </a></li>
+                                        <li><a href="https://osmium.co.in/channels/API?version=VakyaSetu" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">VākyaSetu
+                                                </a></li>
+                                        <li><a href="https://osmium.co.in/channels/API?version=Chaturyug" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">Chaturyug</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-800 dark:text-white mb-4">Connect</h3>
+                                    <ul class="space-y-2">
+                                      
+                                             <li><a href="https://x.com/Navchetna_labs" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">X</a>
+                                        </li>
+                                        <li><a href="https://www.linkedin.com/company/navchetna" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">LinkedIn</a>
+                                        </li>
+                                        <li><a target="_blank" href="https://www.instagram.com/navchetna_labs/" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">Instagram</a>
+                                        </li>
+                                          <li><a href="/contact/" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-12 border-t border-gray-200 dark:border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                                <div class="flex items-center"><img src="/assets/logo.svg" alt="Logo" class="h-8 w-8 mr-2  brightness-0 dark:invert">
+                                    <p class="text-sm text-gray-600 dark:text-neutral-400">© 2025 NINELLMS SOLUTIONS LLP. All rights reserved.</p>
+                                </div>
+                                <div class="mt-4 md:mt-0">
+                                    <div class="flex space-x-4"><a class="text-xs text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="/privacy">Privacy Policy</a><a class="text-xs text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white" href="/terms">Terms of Service</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer></main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightBtn = document.querySelector('button[aria-label="Light mode"]');
+            const systemBtn = document.querySelector('button[aria-label="System theme"]');
+            const darkBtn = document.querySelector('button[aria-label="Dark mode"]');
+            const html = document.documentElement;
+            const themeToggle = document.querySelector('.theme-toggle');
+
+            function updateButtonStates(active) {
+                [lightBtn, systemBtn, darkBtn].forEach(btn => {
+                    btn?.classList.remove('text-neutral-900', 'dark:text-white');
+                    btn?.classList.add('text-neutral-500');
+                });
+                active?.classList.remove('text-neutral-500');
+                active?.classList.add('text-neutral-900', 'dark:text-white');
+            }
+
+            function setTheme(theme) {
+                localStorage.setItem('theme', theme);
+                themeToggle?.classList.remove('light', 'system', 'dark');
+                themeToggle?.classList.add(theme);
+
+                if (theme === 'light') {
+                    html.classList.remove('dark');
+                    updateButtonStates(lightBtn);
+                } else if (theme === 'system') {
+                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    html.classList.toggle('dark', prefersDark);
+                    updateButtonStates(systemBtn);
+                } else {
+                    html.classList.add('dark');
+                    updateButtonStates(darkBtn);
+                }
+            }
+
+            lightBtn?.addEventListener('click', () => setTheme('light'));
+            systemBtn?.addEventListener('click', () => setTheme('system'));
+            darkBtn?.addEventListener('click', () => setTheme('dark'));
+
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+        });
+    </script>
+
+</body></html>
