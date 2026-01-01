@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  
+  // Relations
+  habits    Habit[]
+  
+  @@map("users")
+}
+
+model Habit {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  habitName String   @map("habit_name")
+  frequency String   // daily, weekly, monthly
+  createdAt DateTime @default(now()) @map("created_at")
+  
+  // Relations
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  logs      HabitLog[]
+  
+  // Indexes
+  @@index([userId])
+  @@map("habits")
+}
+
+model HabitLog {
+  id        String   @id @default(cuid())
+  habitId   String   @map("habit_id")
+  date      DateTime @db.Date
+  completed Boolean  @default(false)
+  
+  // Relations
+  habit     Habit    @relation(fields: [habitId], references: [id], onDelete: Cascade)
+  
+  // Indexes
+  @@index([habitId])
+  @@index([date])
+  @@unique([habitId, date]) // Prevent duplicate logs for same habit on same date
+  @@map("habit_logs")
+}
