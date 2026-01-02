@@ -6,8 +6,18 @@ import { HabitWithLogs, HabitLog } from '@/types/habit'
 export function useHabitLogs(initialHabits: HabitWithLogs[]) {
   const [habits, setHabits] = useState<HabitWithLogs[]>(initialHabits)
   const [isUpdating, setIsUpdating] = useState(false)
+  const [optimisticUpdates, setOptimisticUpdates] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    setHabits(initialHabits)
+  }, [initialHabits])
 
   const toggleHabitLog = useCallback(async (habitId: string, date: string) => {
+    const updateKey = `${habitId}-${date}`
+    
+    // Add to optimistic updates
+    setOptimisticUpdates(prev => new Set(prev).add(updateKey))
+    
     // Optimistic update
     setHabits(prev => prev.map(habit => {
       if (habit.id !== habitId) return habit
@@ -89,6 +99,12 @@ export function useHabitLogs(initialHabits: HabitWithLogs[]) {
       console.error('Failed to update habit log:', error)
     } finally {
       setIsUpdating(false)
+      // Remove from optimistic updates
+      setOptimisticUpdates(prev => {
+        const newSet = new Set(prev)
+        newSet.delete(updateKey)
+        return newSet
+      })
     }
   }, [])
 
@@ -97,10 +113,15 @@ export function useHabitLogs(initialHabits: HabitWithLogs[]) {
     return habit?.logs.find(log => log.date === date)
   }, [habits])
 
+  const isOptimisticUpdate = useCallback((habitId: string, date: string): boolean => {
+    return optimisticUpdates.has(`${habitId}-${date}`)
+  }, [optimisticUpdates])
+
   return {
     habits,
     toggleHabitLog,
     getLogForDate,
-    isUpdating
+    isUpdating,
+    isOptimisticUpdate
   }
 }

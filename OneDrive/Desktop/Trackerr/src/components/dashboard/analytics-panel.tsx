@@ -1,41 +1,68 @@
+'use client'
+
+import { DailyCompletionChart } from '../analytics/DailyCompletionChart'
+import { CircularProgress } from '../analytics/CircularProgress'
+import { WeeklyTrendChart } from '../analytics/WeeklyTrendChart'
+import { useAnalytics } from '../analytics/useAnalytics'
+
 export default function AnalyticsPanel() {
-  const stats = [
-    { label: 'Streak', value: '7 days', color: 'text-green-600' },
-    { label: 'Completion', value: '85%', color: 'text-blue-600' },
-    { label: 'Best Habit', value: 'Exercise', color: 'text-purple-600' },
-  ]
+  const { data, loading, error } = useAnalytics()
+
+  if (loading) {
+    return (
+      <div className="bg-white rounded-lg shadow-sm border p-4 sm:p-6 h-fit">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Analytics</h2>
+        <div className="animate-pulse space-y-4">
+          <div className="h-32 bg-gray-200 rounded"></div>
+          <div className="h-24 bg-gray-200 rounded"></div>
+          <div className="h-32 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error || !data) {
+    return (
+      <div className="bg-white rounded-lg shadow-sm border p-4 sm:p-6 h-fit">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Analytics</h2>
+        <div className="text-center py-8 text-gray-500 text-sm">
+          Unable to load analytics data
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border p-6">
-      <h2 className="text-lg font-semibold text-gray-900 mb-4">Analytics</h2>
+    <div className="bg-white rounded-lg shadow-sm border p-4 sm:p-6 space-y-6">
+      <h2 className="text-lg font-semibold text-gray-900">Analytics</h2>
       
-      <div className="space-y-4 mb-6">
-        {stats.map((stat) => (
-          <div key={stat.label} className="flex justify-between items-center">
-            <span className="text-sm text-gray-600">{stat.label}</span>
-            <span className={`text-lg font-semibold ${stat.color}`}>{stat.value}</span>
-          </div>
-        ))}
+      {/* Overall Progress */}
+      <div className="flex justify-center">
+        <CircularProgress percentage={data.overallCompletion} />
+      </div>
+      
+      {/* Key Stats */}
+      <div className="grid grid-cols-2 gap-4 text-center">
+        <div>
+          <div className="text-2xl font-bold text-blue-600">{data.currentStreak}</div>
+          <div className="text-xs text-gray-500">Day Streak</div>
+        </div>
+        <div>
+          <div className="text-2xl font-bold text-green-600">{data.totalHabits}</div>
+          <div className="text-xs text-gray-500">Active Habits</div>
+        </div>
       </div>
 
-      <div className="border-t pt-4">
-        <h3 className="text-sm font-medium text-gray-900 mb-3">Weekly Progress</h3>
-        <div className="space-y-2">
-          {['Morning Exercise', 'Read 30 min', 'Drink Water'].map((habit, index) => (
-            <div key={habit}>
-              <div className="flex justify-between text-xs text-gray-600 mb-1">
-                <span>{habit}</span>
-                <span>{85 - index * 10}%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-blue-500 h-2 rounded-full"
-                  style={{ width: `${85 - index * 10}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Daily Completion Chart */}
+      <div>
+        <h3 className="text-sm font-medium text-gray-900 mb-2">Daily Progress</h3>
+        <DailyCompletionChart data={data.dailyData} />
+      </div>
+
+      {/* Weekly Trend Chart */}
+      <div>
+        <h3 className="text-sm font-medium text-gray-900 mb-2">Weekly Trend</h3>
+        <WeeklyTrendChart data={data.weeklyData} />
       </div>
     </div>
   )

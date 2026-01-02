@@ -1,5 +1,7 @@
-import Dashboard from '@/components/dashboard/dashboard'
+'use client';
 
-export default function Home() {
-  return <Dashboard />
+import Dashboard from '@/components/dashboard/dashboard';
+
+export default function DashboardPage() {
+  return <Dashboard />;
 }

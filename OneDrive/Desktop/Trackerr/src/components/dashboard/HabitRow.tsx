@@ -13,9 +13,12 @@ interface HabitRowProps {
 
 export function HabitRow({ habit, dates, onToggle, getLogForDate, disabled }: HabitRowProps) {
   return (
-    <tr className="hover:bg-gray-50">
-      <td className="py-3 px-3 text-sm font-medium text-gray-900 sticky left-0 bg-white">
-        {habit.habitName}
+    <tr className="hover:bg-gray-50 transition-colors">
+      <td className="py-3 px-2 sm:px-3 text-sm font-medium text-gray-900 sticky left-0 bg-white border-r border-gray-100">
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-blue-500 flex-shrink-0" />
+          <span className="truncate">{habit.habitName}</span>
+        </div>
       </td>
       {dates.map((date) => (
         <CheckboxCell
