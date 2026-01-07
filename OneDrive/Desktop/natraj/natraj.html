@@ -1,0 +1,1002 @@
+<html lang="en" class="h-full"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>NATRAJ</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <meta name="description" content="Operationalize AI with reliable, trustworthy inference. Join the waitlist to get early access.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      scroll-behavior: smooth;
+    }
+    
+    * {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+    
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .card-top {
+        padding: 1rem !important;
+      }
+      
+      .glass-effect {
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+      }
+      
+      /* Better touch targets */
+      button, a {
+        min-height: 44px;
+        min-width: 44px;
+      }
+    }
+  </style>
+  <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-geist">
+    .font-geist {
+      font-family: 'Geist', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-roboto">
+    .font-roboto {
+      font-family: 'Roboto', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-montserrat">
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-poppins">
+    .font-poppins {
+      font-family: 'Poppins', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+  <style id="all-fonts-style-font-playfair">
+    .font-playfair {
+      font-family: 'Playfair Display', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-instrument-serif">
+    .font-instrument-serif {
+      font-family: 'Instrument Serif', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap">
+  <style id="all-fonts-style-font-merriweather">
+    .font-merriweather {
+      font-family: 'Merriweather', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-bricolage">
+    .font-bricolage {
+      font-family: 'Bricolage Grotesque', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-jakarta">
+    .font-jakarta {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-manrope">
+    .font-manrope {
+      font-family: 'Manrope', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-space-grotesk">
+    .font-space-grotesk {
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-work-sans">
+    .font-work-sans {
+      font-family: 'Work Sans', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+  <style id="all-fonts-style-font-pt-serif">
+    .font-pt-serif {
+      font-family: 'PT Serif', serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-geist-mono">
+    .font-geist-mono {
+      font-family: 'Geist Mono', monospace !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap">
+  <style id="all-fonts-style-font-space-mono">
+    .font-space-mono {
+      font-family: 'Space Mono', monospace !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
+  <style id="all-fonts-style-font-quicksand">
+    .font-quicksand {
+      font-family: 'Quicksand', sans-serif !important;
+    }
+  </style>
+  <link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap">
+  <style id="all-fonts-style-font-nunito">
+    .font-nunito {
+      font-family: 'Nunito', sans-serif !important;
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-inset-px{inset:-1px}.inset-x-0{left:0px;right:0px}.left-0{left:0px}.top-0{top:0px}.-bottom-8{bottom:-2rem}.-left-8{left:-2rem}.-right-8{right:-2rem}.-top-8{top:-2rem}.bottom-0{bottom:0px}.bottom-4{bottom:1rem}.left-4{left:1rem}.right-4{right:1rem}.-z-10{z-index:-10}.z-10{z-index:10}.order-1{order:1}.order-2{order:2}.m-0{margin:0px}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mt-4{margin-top:1rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.ml-2{margin-left:0.5rem}.ml-auto{margin-left:auto}.mr-2{margin-right:0.5rem}.mr-auto{margin-right:auto}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-full{height:100%}.h-\[1100px\]{height:1100px}.h-8{height:2rem}.h-1{height:0.25rem}.h-1\.5{height:0.375rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-24{height:6rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-56{height:14rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-80{height:20rem}.h-9{height:2.25rem}.h-\[16px\]{height:16px}.h-\[20px\]{height:20px}.h-fit{height:-moz-fit-content;height:fit-content}.h-px{height:1px}.h-10{height:2.5rem}.h-\[12px\]{height:12px}.min-h-full{min-height:100%}.min-h-\[44px\]{min-height:44px}.w-full{width:100%}.w-1{width:0.25rem}.w-1\.5{width:0.375rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-2\.5{width:0.625rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-9{width:2.25rem}.w-\[16px\]{width:16px}.w-\[20px\]{width:20px}.w-px{width:1px}.w-10{width:2.5rem}.w-\[12px\]{width:12px}.min-w-\[140px\]{min-width:140px}.max-w-7xl{max-width:80rem}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.translate-y-2{--tw-translate-y:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-\[0\.98\]{--tw-scale-x:0.98;--tw-scale-y:0.98;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform-gpu{transform:translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.grid-cols-\[20px_1fr\]{grid-template-columns:20px 1fr}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-3{gap:0.75rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded{border-radius:0.25rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[1\.2em\]{border-radius:1.2em}.rounded-\[1\.3rem\]{border-radius:1.3rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/15{border-color:rgb(255 255 255 / 0.15)}.border-neutral-500\/20{border-color:rgb(115 115 115 / 0.2)}.border-neutral-600\/20{border-color:rgb(82 82 82 / 0.2)}.border-neutral-700\/20{border-color:rgb(64 64 64 / 0.2)}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-white\/5{border-color:rgb(255 255 255 / 0.05)}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}.bg-neutral-950{--tw-bg-opacity:1;background-color:rgb(10 10 10 / var(--tw-bg-opacity, 1))}.bg-neutral-900\/60{background-color:rgb(23 23 23 / 0.6)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-neutral-300\/60{background-color:rgb(212 212 212 / 0.6)}.bg-neutral-400{--tw-bg-opacity:1;background-color:rgb(163 163 163 / var(--tw-bg-opacity, 1))}.bg-neutral-400\/60{background-color:rgb(163 163 163 / 0.6)}.bg-neutral-500\/10{background-color:rgb(115 115 115 / 0.1)}.bg-neutral-500\/60{background-color:rgb(115 115 115 / 0.6)}.bg-neutral-600\/10{background-color:rgb(82 82 82 / 0.1)}.bg-neutral-700\/10{background-color:rgb(64 64 64 / 0.1)}.bg-neutral-900{--tw-bg-opacity:1;background-color:rgb(23 23 23 / var(--tw-bg-opacity, 1))}.bg-neutral-900\/50{background-color:rgb(23 23 23 / 0.5)}.bg-neutral-950\/30{background-color:rgb(10 10 10 / 0.3)}.bg-neutral-950\/50{background-color:rgb(10 10 10 / 0.5)}.bg-neutral-950\/60{background-color:rgb(10 10 10 / 0.6)}.bg-orange-300{--tw-bg-opacity:1;background-color:rgb(253 186 116 / var(--tw-bg-opacity, 1))}.bg-orange-300\/10{background-color:rgb(253 186 116 / 0.1)}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/5{background-color:rgb(255 255 255 / 0.05)}.bg-zinc-300{--tw-bg-opacity:1;background-color:rgb(212 212 216 / var(--tw-bg-opacity, 1))}.bg-zinc-600{--tw-bg-opacity:1;background-color:rgb(82 82 91 / var(--tw-bg-opacity, 1))}.bg-white\/\[0\.03\]{background-color:rgb(255 255 255 / 0.03)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-\[url\(\'\.\/images\/hands\.png\'\)\]{background-image:url('./images/hands.png')}.bg-\[url\(\'\.\/images\/quiz\.png\'\)\]{background-image:url('./images/quiz.png')}.bg-\[url\(\'images\/3d\.png\'\)\]{background-image:url('images/3d.png')}.bg-\[url\(https\:\/\/hoirqrkdgbmvpwutwuwj-all\.supabase\.co\/storage\/v1\/object\/public\/assets\/assets\/0d850914-e949-410a-ac08-c604b47ea90f_3840w\.jpg\)\]{background-image:url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/0d850914-e949-410a-ac08-c604b47ea90f_3840w.jpg)}.bg-\[url\(https\:\/\/hoirqrkdgbmvpwutwuwj-all\.supabase\.co\/storage\/v1\/object\/public\/assets\/assets\/edaf8dff-6ac4-4fed-b5ff-f41e6863a090_800w\.jpg\)\]{background-image:url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/edaf8dff-6ac4-4fed-b5ff-f41e6863a090_800w.jpg)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-white\/10{--tw-gradient-from:rgb(255 255 255 / 0.1) var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-neutral-400{--tw-gradient-from:#a3a3a3 var(--tw-gradient-from-position);--tw-gradient-to:rgb(163 163 163 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-neutral-400\/20{--tw-gradient-from:rgb(163 163 163 / 0.2) var(--tw-gradient-from-position);--tw-gradient-to:rgb(163 163 163 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-neutral-600\/10{--tw-gradient-from:rgb(82 82 82 / 0.1) var(--tw-gradient-from-position);--tw-gradient-to:rgb(82 82 82 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-neutral-900\/70{--tw-gradient-from:rgb(23 23 23 / 0.7) var(--tw-gradient-from-position);--tw-gradient-to:rgb(23 23 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-neutral-900\/80{--tw-gradient-from:rgb(23 23 23 / 0.8) var(--tw-gradient-from-position);--tw-gradient-to:rgb(23 23 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-orange-300{--tw-gradient-from:#fdba74 var(--tw-gradient-from-position);--tw-gradient-to:rgb(253 186 116 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-white{--tw-gradient-from:#fff var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-white\/15{--tw-gradient-from:rgb(255 255 255 / 0.15) var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-white\/95{--tw-gradient-from:rgb(255 255 255 / 0.95) var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-zinc-900{--tw-gradient-from:#18181b var(--tw-gradient-from-position);--tw-gradient-to:rgb(24 24 27 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-white\/20{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(255 255 255 / 0.2) var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white\/5{--tw-gradient-to:rgb(255 255 255 / 0.05) var(--tw-gradient-to-position)}.to-neutral-200\/80{--tw-gradient-to:rgb(229 229 229 / 0.8) var(--tw-gradient-to-position)}.to-neutral-500{--tw-gradient-to:#737373 var(--tw-gradient-to-position)}.to-neutral-500\/10{--tw-gradient-to:rgb(115 115 115 / 0.1) var(--tw-gradient-to-position)}.to-neutral-900\/40{--tw-gradient-to:rgb(23 23 23 / 0.4) var(--tw-gradient-to-position)}.to-orange-300{--tw-gradient-to:#fdba74 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.to-zinc-950{--tw-gradient-to:#09090b var(--tw-gradient-to-position)}.bg-contain{background-size:contain}.bg-cover{background-size:cover}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.bg-center{background-position:center}.bg-no-repeat{background-repeat:no-repeat}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-1{padding:0.25rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-1{padding-bottom:0.25rem}.pb-1\.5{padding-bottom:0.375rem}.pb-3{padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pb-7{padding-bottom:1.75rem}.pb-8{padding-bottom:2rem}.pb-\[1px\]{padding-bottom:1px}.pl-2{padding-left:0.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pl-5{padding-left:1.25rem}.pl-6{padding-left:1.5rem}.pl-8{padding-left:2rem}.pl-\[1px\]{padding-left:1px}.pr-2{padding-right:0.5rem}.pr-3{padding-right:0.75rem}.pr-4{padding-right:1rem}.pr-5{padding-right:1.25rem}.pr-6{padding-right:1.5rem}.pr-8{padding-right:2rem}.pr-\[1px\]{padding-right:1px}.pt-1{padding-top:0.25rem}.pt-1\.5{padding-top:0.375rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.pt-\[1px\]{padding-top:1px}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[1\.75rem\]{font-size:1.75rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[15px\]{font-size:15px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-light{font-weight:300}.font-normal{font-weight:400}.uppercase{text-transform:uppercase}.leading-3{line-height:.75rem}.leading-\[1\.2\]{line-height:1.2}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.text-neutral-100{--tw-text-opacity:1;color:rgb(245 245 245 / var(--tw-text-opacity, 1))}.text-neutral-200{--tw-text-opacity:1;color:rgb(229 229 229 / var(--tw-text-opacity, 1))}.text-neutral-300{--tw-text-opacity:1;color:rgb(212 212 212 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/90{color:rgb(255 255 255 / 0.9)}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.text-neutral-400\/50{color:rgb(163 163 163 / 0.5)}.text-neutral-400\/80{color:rgb(163 163 163 / 0.8)}.text-neutral-500{--tw-text-opacity:1;color:rgb(115 115 115 / var(--tw-text-opacity, 1))}.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1))}.text-orange-300{--tw-text-opacity:1;color:rgb(253 186 116 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-yellow-300{--tw-text-opacity:1;color:rgb(253 224 71 / var(--tw-text-opacity, 1))}.text-zinc-100{--tw-text-opacity:1;color:rgb(244 244 245 / var(--tw-text-opacity, 1))}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}.text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}.text-white\/40{color:rgb(255 255 255 / 0.4)}.text-white\/60{color:rgb(255 255 255 / 0.6)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-neutral-500::placeholder{--tw-placeholder-opacity:1;color:rgb(115 115 115 / var(--tw-placeholder-opacity, 1))}.placeholder-white\/40::placeholder{color:rgb(255 255 255 / 0.4)}.opacity-70{opacity:0.7}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_8px_16px_-4px_rgba\(255\2c 255\2c 255\2c 0\.05\)\]{--tw-shadow:0 8px 16px -4px rgba(255,255,255,0.05);--tw-shadow-colored:0 8px 16px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-neutral-300\/20{--tw-ring-color:rgb(212 212 212 / 0.2)}.ring-white\/10{--tw-ring-color:rgb(255 255 255 / 0.1)}.ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.blur-\[0\.3px\]{--tw-blur:blur(0.3px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[100px\]{--tw-blur:blur(100px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-xl{--tw-blur:blur(24px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-2xl{--tw-backdrop-blur:blur(40px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.ease-\[cubic-bezier\(0\.4\2c 0\2c 0\.2\2c 1\)\]{transition-timing-function:cubic-bezier(0.4,0,0.2,1)}.selection\:bg-neutral-400\/30 *::selection{background-color:rgb(163 163 163 / 0.3)}.selection\:text-neutral-100 *::selection{--tw-text-opacity:1;color:rgb(245 245 245 / var(--tw-text-opacity, 1))}.selection\:bg-neutral-400\/30::selection{background-color:rgb(163 163 163 / 0.3)}.selection\:text-neutral-100::selection{--tw-text-opacity:1;color:rgb(245 245 245 / var(--tw-text-opacity, 1))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-px:hover{--tw-translate-y:-1px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-white\/20:hover{border-color:rgb(255 255 255 / 0.2)}.hover\:bg-white\/5:hover{background-color:rgb(255 255 255 / 0.05)}.hover\:bg-white\/10:hover{background-color:rgb(255 255 255 / 0.1)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-white\/60:hover{color:rgb(255 255 255 / 0.6)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-\[0_12px_20px_-6px_rgba\(255\2c 255\2c 255\2c 0\.1\)\]:hover{--tw-shadow:0 12px 20px -6px rgba(255,255,255,0.1);--tw-shadow-colored:0 12px 20px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:brightness-95:hover{--tw-brightness:brightness(.95);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.focus\:border-neutral-400\/40:focus{border-color:rgb(163 163 163 / 0.4)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-neutral-300\/30:focus{--tw-ring-color:rgb(212 212 212 / 0.3)}.focus-visible\:outline-none:focus-visible{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-2:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-cyan-400\/60:focus-visible{--tw-ring-color:rgb(34 211 238 / 0.6)}.active\:translate-y-px:active{--tw-translate-y:1px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-0\.5{--tw-translate-x:0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-black\/50{background-color:rgb(0 0 0 / 0.5)}@media (min-width: 640px){.sm\:mt-6{margin-top:1.5rem}.sm\:mb-2{margin-bottom:0.5rem}.sm\:mt-12{margin-top:3rem}.sm\:mt-14{margin-top:3.5rem}.sm\:mt-16{margin-top:4rem}.sm\:mt-5{margin-top:1.25rem}.sm\:mt-8{margin-top:2rem}.sm\:mb-12{margin-bottom:3rem}.sm\:mb-16{margin-bottom:4rem}.sm\:block{display:block}.sm\:inline{display:inline}.sm\:hidden{display:none}.sm\:h-10{height:2.5rem}.sm\:h-12{height:3rem}.sm\:h-2{height:0.5rem}.sm\:h-3{height:0.75rem}.sm\:h-32{height:8rem}.sm\:h-4{height:1rem}.sm\:h-64{height:16rem}.sm\:h-7{height:1.75rem}.sm\:h-8{height:2rem}.sm\:h-\[16px\]{height:16px}.sm\:min-h-\[auto\]{min-height:auto}.sm\:w-2{width:0.5rem}.sm\:w-3{width:0.75rem}.sm\:w-3\/4{width:75%}.sm\:w-4{width:1rem}.sm\:w-7{width:1.75rem}.sm\:w-\[16px\]{width:16px}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.sm\:grid-cols-\[30px_1fr\]{grid-template-columns:30px 1fr}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:gap-2{gap:0.5rem}.sm\:gap-3{gap:0.75rem}.sm\:gap-4{gap:1rem}.sm\:gap-6{gap:1.5rem}.sm\:gap-8{gap:2rem}.sm\:gap-12{gap:3rem}.sm\:rounded-3xl{border-radius:1.5rem}.sm\:rounded-2xl{border-radius:1rem}.sm\:p-2{padding:0.5rem}.sm\:p-4{padding:1rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-0{padding-left:0px;padding-right:0px}.sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}.sm\:py-12{padding-top:3rem;padding-bottom:3rem}.sm\:py-24{padding-top:6rem;padding-bottom:6rem}.sm\:pb-12{padding-bottom:3rem}.sm\:pt-12{padding-top:3rem}.sm\:pt-8{padding-top:2rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-\[11px\]{font-size:11px}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-xs{font-size:0.75rem;line-height:1rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:leading-4{line-height:1rem}.sm\:leading-\[1\.1\]{line-height:1.1}.sm\:tracking-tighter{letter-spacing:-0.05em}}@media (min-width: 768px){.md\:flex{display:flex}.md\:inline-flex{display:inline-flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media (min-width: 1024px){.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:col-span-1{grid-column:span 1 / span 1}.lg\:mt-24{margin-top:6rem}.lg\:max-w-md{max-width:28rem}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:gap-6{gap:1.5rem}.lg\:gap-10{gap:2.5rem}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:p-16{padding:4rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-sm{font-size:0.875rem;line-height:1.25rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-\[26px\]{font-size:26px}.lg\:leading-\[1\.05\]{line-height:1.05}}@media (min-width: 1280px){.xl\:text-6xl{font-size:3.75rem;line-height:1}}</style><script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js"></script></head>
+
+<body class="min-h-full bg-neutral-950 text-neutral-100 antialiased selection:bg-neutral-400/30 selection:text-neutral-100 overflow-x-hidden">
+  <div class="aura-background-component top-0 w-full -z-10 absolute h-[1100px] overflow-hidden hidden sm:block">
+    <div data-us-project="ZHhDKfVqqu8PKOSMwfuA" class="absolute top-0 left-0 -z-10 w-full h-full" data-us-initialized="true" data-scene-id="id-flksd4h5cwof7i27o841ts"><canvas width="2281" height="1650" style="width: 1520px; height: 1100px;" aria-label="Unicorn Studio Scene" role="img"></canvas></div>
+    <script type="text/javascript">
+      !function () { if (!window.UnicornStudio) { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js", i.onload = function () { window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio.isInitialized = !0) }, (document.head || document.body).appendChild(i) } }();
+    </script>
+  </div>
+
+  <!-- Page container -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex sm:rounded-3xl sm:px-6 bg-neutral-900/60 border-white/10 border rounded-2xl mt-4 sm:mt-6 py-3 px-4 backdrop-blur-lg items-center justify-between">
+        <!-- Brand -->
+        <a href="#hero" class="flex items-center gap-2 sm:gap-3">
+          <img src="assets/logo2.svg" alt="NATRAJ" class="h-6 w-auto">
+        </a>
+        <!-- Nav -->
+        <nav class="hidden items-center gap-4 lg:gap-6 md:flex">
+          <a href="#hero" class="text-xs lg:text-sm font-medium text-neutral-300 hover:text-white transition font-sans">Home</a>
+          <a href="#features" class="text-xs lg:text-sm font-medium text-neutral-300 hover:text-white transition font-sans">features</a>
+          <a href="https://osmium.co.in/about/" class="text-xs lg:text-sm font-medium text-neutral-300 hover:text-white transition font-sans">Our Journey</a>
+          <a href="#" class="text-xs lg:text-sm font-medium text-neutral-300 hover:text-white transition font-sans"></a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-all duration-300 z-50 relative flex items-center justify-center">
+          <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white transition-all duration-300">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256" class="text-white absolute opacity-0 transition-all duration-300">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+          </svg>
+        </button>
+        
+        <script>
+          let isMenuOpen = false;
+          function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+              menu.classList.remove('hidden');
+              hamburgerIcon.style.opacity = '0';
+              closeIcon.style.opacity = '1';
+            } else {
+              menu.classList.add('hidden');
+              hamburgerIcon.style.opacity = '1';
+              closeIcon.style.opacity = '0';
+            }
+          }
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', function(e) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            if (isMenuOpen && !menu.contains(e.target) && !btn.contains(e.target)) {
+              toggleMobileMenu();
+            }
+          });
+        </script>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 mt-2 bg-neutral-900/90 border border-white/10 rounded-2xl backdrop-blur-lg p-4 md:hidden">
+          <nav class="flex flex-col gap-4">
+            <a href="#hero" class="text-sm font-medium text-neutral-300 hover:text-white transition font-sans">Home</a>
+            <a href="#features" class="text-sm font-medium text-neutral-300 hover:text-white transition font-sans">Features</a>
+            <a href="https://osmium.co.in/about/" class="text-sm font-medium text-neutral-300 hover:text-white transition font-sans">Our Journey</a>
+            <a href="#" class="text-sm font-medium text-white bg-white/10 rounded-lg py-2 px-4 text-center transition hover:bg-white/20">Pre-register</a>
+          </nav>
+        </div>
+        
+        <!-- CTA -->
+        <div class="hidden md:flex gap-1 sm:gap-2 items-center">
+        
+          <a href="#footer-signup" onclick="document.getElementById('footer-signup').scrollIntoView({behavior: 'smooth'});" class="liquid-glass-button relative inline-flex items-center justify-center h-8 sm:h-10 px-3 sm:px-6 text-white/90 font-medium text-xs sm:text-sm cursor-pointer outline-none overflow-hidden bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl border border-white/15 shadow-lg hover:scale-105 hover:shadow-xl hover:-translate-y-0.5 active:scale-98 active:translate-y-px transition-all duration-300 ease-out rounded-full" style="box-shadow: 0 0 6px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.08), inset 3px 3px 0.5px -3px rgba(255,255,255,0.2), inset -3px -3px 0.5px -3px rgba(255,255,255,0.1), inset 1px 1px 1px -0.5px rgba(255,255,255,0.3), inset -1px -1px 1px -0.5px rgba(255,255,255,0.15), inset 0 0 6px 6px rgba(255,255,255,0.05), inset 0 0 2px 2px rgba(255,255,255,0.02), 0 0 12px rgba(0,0,0,0.1);">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none rounded-full">
+              <div class="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-white/3 rounded-full">
+              </div>
+            </div>
+            <span class="relative z-10 rounded-full">Pre-register</span>
+            <script class="rounded-full">
+              (function () { const button = document.querySelector('.liquid-glass-button'); if (button) { button.addEventListener('click', function (e) { const rect = this.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top; const ripple = document.createElement('span'); ripple.className = 'absolute rounded-full bg-gradient-radial from-white/30 to-transparent pointer-events-none animate-ping'; ripple.style.left = x - 25 + 'px'; ripple.style.top = y - 25 + 'px'; ripple.style.width = '50px'; ripple.style.height = '50px'; ripple.style.animation = 'ripple 0.6s linear'; this.appendChild(ripple); setTimeout(() => ripple.remove(), 600); }); } })()
+            </script>
+
+            <style class="rounded-full">
+              @keyframes ripple {
+                0% {
+                  transform: scale(0);
+                  opacity: 1
+                }
+
+                100% {
+                  transform: scale(2);
+                  opacity: 0
+                }
+              }
+            </style>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Card -->
+  <main class="relative z-10 pt-20 sm:pt-24">
+    <section id="hero" class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-8 sm:mt-16 lg:mt-24">
+      <div class="relative p-3 sm:p-6 lg:p-10">
+        <!-- Glow edge -->
+
+
+        <div class="grid gap-8 lg:gap-10 lg:grid-cols-2 items-center">
+          <!-- Left: Copy -->
+          <div class="relative z-10">
+            <h1 class="max-w-3xl text-[1.75rem] leading-[1.2] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl sm:leading-[1.1] lg:leading-[1.05] tracking-tight sm:tracking-tighter" style="display: block;">
+            <span class="block sm:inline">Where the Human Body</span>
+             <span class="block sm:inline">Becomes a</span> <span class="bg-clip-text text-transparent tracking-tight sm:tracking-tighter bg-gradient-to-r from-orange-300 to-white" style="">Mandala of</span> <span class="bg-clip-text text-transparent tracking-tight sm:tracking-tighter bg-gradient-to-r from-white to-orange-300" style="">Knowledge.</span>
+            </h1>
+            <p class="max-w-xl leading-relaxed text-sm sm:text-base font-normal text-neutral-300 mt-4 sm:mt-5">
+             Bridge the gap between ancient wisdom and modern anatomy learning. NATRAJ transforms the human body into a living sutra through AI and AR, delivering immersive 3D exploration, intelligent guidance, and a platform built for precision, reliability, and limitless discovery.
+            </p>
+
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center mt-6 sm:mt-8">
+              <a href="#waitlist" class="group inline-flex items-center justify-center gap-2 sm:gap-3 ring-1 ring-white/10 hover:bg-white/10 transition text-sm sm:text-sm font-semibold text-white bg-white/5 rounded-full py-3 px-6 sm:px-6 backdrop-blur-lg min-h-[44px] sm:min-h-[auto]">
+                Join the Waitlist
+                <span class="inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center group-hover:translate-x-0.5 transition text-neutral-900 bg-orange-300 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-right" class="lucide lucide-arrow-up-right h-3 w-3 sm:h-4 sm:w-4"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                </span>
+              </a>
+              <a href="https://navchetna.tech" target="_blank" class="inline-flex gap-2 hover:text-white transition text-sm sm:text-sm font-medium text-neutral-300 rounded-full py-3 px-6 sm:px-6 items-center justify-center font-sans min-h-[44px] sm:min-h-[auto] border border-white/10">
+                <img src="images/nav.png" alt="nav" class="w-4 h-4">
+                Navchetna
+              </a>
+            </div>
+
+            <!-- Mini metrics -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-4 max-w-md mt-6 sm:mt-8">
+              <div class="bg-white/5 border-white/10 border rounded-xl sm:rounded-2xl p-2 sm:p-3 backdrop-blur-lg text-center">
+                <div class="text-lg sm:text-xl tracking-tighter font-sans" style="">100%</div>
+                <div class="mt-1 text-[9px] sm:text-[10px] text-neutral-400 font-sans leading-tight">Accuracy guaranteed</div>
+              </div>
+              <div class="bg-white/5 border-white/10 border rounded-xl sm:rounded-2xl p-2 sm:p-3 backdrop-blur-lg text-center">
+                <div class="text-lg sm:text-xl tracking-tighter font-sans" style="">95%</div>
+                <div class="mt-1 text-[9px] sm:text-[10px] text-neutral-400 font-sans leading-tight">Precision assured</div>
+              </div>
+              <div class="bg-white/5 border-white/10 border rounded-xl sm:rounded-2xl p-2 sm:p-3 backdrop-blur-lg text-center">
+                <div class="text-sm sm:text-base tracking-tighter font-sans" style="">AI-Powered</div>
+                <div class="mt-1 text-[8px] sm:text-[9px] text-neutral-400 font-sans leading-tight">Driven by Osmium LLM</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual -->
+          <div class="relative w-full">
+            <div class="card-top glass-effect w-full max-w-2xl mx-auto h-fit overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+        <video class="w-full h-full object-cover rounded-[1.2em]" autoplay loop muted>
+          <source src="video/D_Skeleton_Animation_Generation (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
+              
+                </div>
+
+          
+
+    
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icon strip -->
+
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="relative z-10 sm:py-24 fade-in fade-in-delay-4 pt-8 pb-8" style="opacity: 1; transform: translateY(0px);">
+      <div class="max-w-7xl mt-6 mr-auto ml-auto pt-6 pr-6 pb-6 pl-6">
+        <div class="text-center">
+          <p class="uppercase text-sm font-medium text-zinc-400 tracking-wide">Powering the world’s most focused product
+            teams</p>
+            <br>
+            <br>
+        </div>
+        <div class="overflow-hidden">
+          <div class="ticker-track flex gap-8 sm:gap-12 lg:gap-16 py-2 items-center">
+            <!-- First set of logos -->
+            <div class="flex gap-8 sm:gap-12 lg:gap-16 shrink-0 items-center">
+              <img src="/assets/aws.svg" alt="AWS" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/nineone.svg" alt="NineOne152" class="h-6 sm:h-7 lg:h-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/plaur.svg" alt="Plaur" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/plenora.svg" alt="Plenora" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/sarvam.svg" alt="Sarvam" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/ssip.svg" alt="SSIP" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/TantriX.svg" alt="TantriX" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="flex gap-8 sm:gap-12 lg:gap-16 shrink-0 items-center">
+              <img src="/assets/aws.svg" alt="AWS" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/nineone.svg" alt="NineOne152" class="h-6 sm:h-7 lg:h-8 opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/plaur.svg" alt="Plaur" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/plenora.svg" alt="Plenora" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/sarvam.svg" alt="Sarvam" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/ssip.svg" alt="SSIP" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/assets/TantriX.svg" alt="TantriX" class="h-6 sm:h-7 lg:h-8 filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+            </div>
+          </div>
+        </div>
+             </div>
+      </div>
+
+      <style>
+        @keyframes ticker {
+          0% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .ticker-track {
+          animation: ticker 40s linear infinite;
+          width: calc(200% + 16px);
+        }
+
+        .ticker-track:hover {
+          animation-play-state: paused;
+        }
+      </style>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div class="grid gap-6 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8 sm:mt-14">
+        <!-- Evaluation Pipeline Card -->
+        <div class="card-top glass-effect w-full h-fit overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+          <div class="absolute inset-0 border-white/20 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, white, transparent 60%)"></div>
+          <div class="absolute inset-0 border-white/10 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, transparent 60%, white)"></div>
+
+          <div class="flex flex-col h-full pt-6 pr-6 pb-7 pl-6">
+            <div class="flex mb-2 items-start justify-between">
+              <div class="w-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-neutral-400 to-neutral-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-white">
+                      <path d="M6 5v11"></path>
+                      <path d="M12 5v6"></path>
+                      <path d="M18 5v14"></path>
+                    </svg>
+                  </span>
+                  <h3 class="text-lg font-semibold tracking-tight font-sans">Sutra</h3>
+                </div>
+                <p class="text-neutral-300 text-sm font-light mb-4 font-sans">Explore anatomy like never before with immersive AI + AR models.
+                  </p>
+              </div>
+            </div>
+
+            <article class="relative overflow-hidden sm:p-5 h-80 bg-gradient-to-br from-zinc-900 to-zinc-950 border-zinc-800 border rounded-2xl pt-4 pr-4 pb-4 pl-4">
+              <div class="absolute inset-0"></div>
+              <div class="relative z-10 h-full flex flex-col">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-1">
+                    <span class="h-1 w-1 rounded-full bg-zinc-300"></span>
+                    <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                    <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                  </div>
+                  <span class="text-[11px] text-zinc-500 font-normal font-geist" style="">01</span>
+                </div>
+                <div class="flex-1 flex flex-col bg-[url('./images/hands.png')] bg-cover rounded-lg mt-2 mb-2 pt-6 pb-6 items-center justify-center">
+
+                </div>
+                <div class="mt-auto">
+                  <h3 class="text-[15px] sm:text-base font-medium leading-snug tracking-tight text-zinc-100 font-geist" style="">Interactive 3D body systems you can rotate, zoom, and explore.</h3>
+                  <p class="mt-1 text-sm text-zinc-400 font-geist" style="">Learning that feels alive, not static diagrams.</p>
+                </div>
+              </div>
+              <div class="absolute bottom-4 right-4">
+
+              </div>
+            </article>
+
+
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-3"></div>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-500/10 border border-neutral-500/20 text-neutral-300 font-sans">
+                3D Models
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-600/10 border border-neutral-600/20 text-neutral-300 font-sans">
+                AI Insights
+              </span>
+            </div>
+
+            <div class="mt-5 inline-flex items-center text-sm font-medium text-neutral-300 font-sans">
+              
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- Model Orchestration Card -->
+        <div class="card-top glass-effect w-full h-fit overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+          <div class="absolute inset-0 border-white/20 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, white, transparent 60%)"></div>
+          <div class="absolute inset-0 border-white/10 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, transparent 60%, white)"></div>
+
+          <div class="flex flex-col h-full pt-6 pr-6 pb-7 pl-6">
+            <div class="flex mb-2 items-start justify-between">
+              <div class="w-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-neutral-400 to-neutral-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-white">
+                      <path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path>
+                      <path d="m7 16.5-4.74-2.85"></path>
+                      <path d="m7 16.5 5-3"></path>
+                      <path d="M7 16.5v5.17"></path>
+                      <path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path>
+                      <path d="m17 16.5-5-3"></path>
+                      <path d="m17 16.5 4.74-2.85"></path>
+                      <path d="M17 16.5v5.17"></path>
+                      <path d="M12 8 7.26 5.15"></path>
+                      <path d="m12 8 4.74-2.85"></path>
+                      <path d="M12 13.5V8"></path>
+                    </svg>
+                  </span>
+                  <h3 class="text-lg font-semibold tracking-tight font-sans">Tattva</h3>
+                </div>
+                <p class="text-neutral-300 text-sm font-light mb-4 font-sans">Smarter learning with interactive and engaging tools.
+                  </p>
+              </div>
+            </div>
+
+            <article class="relative overflow-hidden sm:p-5 h-80 bg-gradient-to-br from-zinc-900 to-zinc-950 border-zinc-800 border rounded-2xl pt-4 pr-4 pb-4 pl-4">
+              <div class="absolute inset-0"></div>
+              <div class="relative z-10 h-full flex flex-col">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-1">
+                    <span class="h-1 w-1 rounded-full bg-zinc-300"></span>
+                    <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                    <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                  </div>
+                  <span class="text-[11px] text-zinc-500 font-normal font-geist" style="">02</span>
+                </div>
+                <div class="flex-1 flex flex-col bg-[url('./images/quiz.png')] bg-cover rounded-lg mt-2 mb-2 pt-6 pb-6 items-center justify-center">
+
+                </div>
+                <div class="mt-auto">
+                  <h3 class="text-[15px] sm:text-base font-medium leading-snug tracking-tight text-zinc-100 font-geist" style="">Guided pathways to master complex topics step by step.</h3>
+                  <p class="mt-1 text-sm text-zinc-400 font-geist" style="">Instant quizzes, notes, and insights to reinforce your understanding.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute bottom-4 right-4">
+
+              </div>
+            </article>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-3"></div>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-500/10 border border-neutral-500/20 text-neutral-300 font-sans">
+                Quizzes
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-600/10 border border-neutral-600/20 text-neutral-300 font-sans">
+               Learning Pathways
+              </span>
+            </div>
+
+            <div class="mt-5 inline-flex items-center text-sm font-medium text-neutral-300 font-sans">
+             
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Compliance & Safety Card -->
+        <div class="card-top glass-effect w-full h-fit overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+          <div class="absolute inset-0 border-white/20 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, white, transparent 60%)"></div>
+          <div class="absolute inset-0 border-white/10 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, transparent 60%, white)"></div>
+
+          <div class="flex flex-col h-full pt-6 pr-6 pb-7 pl-6">
+            <div class="flex mb-2 items-start justify-between">
+              <div class="w-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-neutral-400 to-neutral-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-white">
+                      <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </span>
+                  <h3 class="text-lg font-semibold tracking-tight font-sans">Mandala  </h3>
+                </div>
+                <p class="text-sm font-light text-neutral-300 mb-4">Accurate content verified for medical and academic standards.
+                  </p>
+              </div>
+            </div>
+
+            <article class="relative overflow-hidden sm:p-5 h-80 bg-gradient-to-br from-zinc-900 to-zinc-950 border-zinc-800 border rounded-2xl pt-4 pr-4 pb-4 pl-4">
+              <div class="absolute inset-0"></div>
+              <div class="relative z-10 h-full flex flex-col">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-1">
+                    <span class="h-1 w-1 rounded-full bg-zinc-300"></span>
+                    <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                    <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                  </div>
+                  <span class="text-[11px] text-zinc-500 font-normal font-geist" style="">03</span>
+                </div>
+                <div class="flex-1 flex flex-col bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/edaf8dff-6ac4-4fed-b5ff-f41e6863a090_800w.jpg)] bg-cover rounded-lg mt-2 mb-2 pt-6 pb-6 items-center justify-center">
+
+                </div>
+                <div class="mt-auto">
+                  <h3 class="text-[15px] sm:text-base font-medium leading-snug tracking-tight text-zinc-100 font-geist" style="">Safe and consistent platform built for learning at scale.</h3>
+                  <p class="text-sm text-zinc-400 font-geist mt-1" style="">Seamless collaboration for students and educators alike.</p>
+                </div>
+              </div>
+              <div class="absolute bottom-4 right-4">
+
+              </div>
+            </article>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-3"></div>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-500/10 border border-neutral-500/20 text-neutral-300 font-sans">
+               Anatomy
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-600/10 border border-neutral-600/20 text-neutral-300 font-sans">
+               Academic Precision
+              </span>
+            </div>
+
+            <div class="mt-5 inline-flex items-center text-sm font-medium text-neutral-300 font-sans">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div class="mt-8 sm:mt-14 grid items-center gap-6 lg:gap-8 lg:grid-cols-2">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl tracking-tighter" style="">Anatomy Like You’ve Never Seen</h2>
+          <p class="max-w-xl text-base text-neutral-300 mt-4 font-sans">
+          Explore anatomy in 3D, simulate real-world scenarios, and grasp complex concepts with immersive AR. Monitor your progress and understand every system in depth.
+          </p>
+          <ul class="mt-6 space-y-3 text-sm text-neutral-300">
+            <li class="flex gap-3 items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" class="lucide lucide-check-circle-2 mt-0.5 w-[20px] h-[20px] text-orange-300" data-icon-replaced="true" style="width: 20px; height: 20px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+           Explore 3D Anatomy, Track Progress, Master Concepts
+            </li>
+            <li class="flex items-start gap-3 font-sans">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" class="lucide lucide-check-circle-2 mt-0.5 w-[20px] h-[20px] text-orange-300" data-icon-replaced="true" style="width: 20px; height: 20px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+              Interactive AR, Instant Quizzes, Verified Content
+            </li>
+            <li class="flex items-start gap-3 font-sans">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" class="lucide lucide-check-circle-2 mt-0.5 w-[20px] h-[20px] text-orange-300" data-icon-replaced="true" style="width: 20px; height: 20px;"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+             Learn Faster, See Deeper, Engage Smarter
+            </li>
+          </ul>
+      
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="relative overflow-hidden bg-neutral-900 border-white/10 border rounded-3xl pt-4 pr-4 pb-4 pl-4">
+            <div class="card-top glass-effect w-full h-fit overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+              <div class="absolute inset-0 border-white/20 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, white, transparent 60%)"></div>
+              <div class="absolute inset-0 border-white/10 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, transparent 60%, white)"></div>
+
+              <div class="flex flex-col lg:flex-row gap-6 h-full pt-6 pr-6 pb-7 pl-6">
+                <!-- Left content -->
+                <div class="flex flex-col flex-1">
+                  <div class="flex gap-3 mb-3 items-center">
+
+                    <h3 class="text-lg font-semibold tracking-tight">Real-time Anatomy Insights</h3>
+                  </div>
+                  <p class="text-neutral-300 text-sm font-light mb-4 font-sans">Visualize body systems, track learning patterns, and get instant feedback on your progress.
+                  </p>
+
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-500/10 border border-neutral-500/20 text-neutral-300 font-sans">
+                      3D Visualization
+                    </span>
+                    <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-neutral-600/10 border border-neutral-600/20 text-neutral-300 font-sans">
+                     Interactive AR
+                    </span>
+                  </div>
+
+                  <div class="mt-auto inline-flex items-center text-sm font-medium text-neutral-300 font-sans">
+                   
+                  </div>
+                </div>
+
+                <!-- Right visual -->
+                <div class="flex-1 lg:max-w-md">
+                  <article class="relative overflow-hidden h-64 bg-gradient-to-br from-zinc-900 to-zinc-950 border-zinc-800 border rounded-2xl pt-4 pr-4 pb-4 pl-4">
+                    <div class="absolute inset-0"></div>
+                    <div class="relative z-10 h-full flex flex-col">
+                      <div class="flex items-start justify-between">
+                        <div class="flex items-center gap-1">
+                          <span class="h-1 w-1 rounded-full bg-zinc-300"></span>
+                          <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                          <span class="h-1 w-1 rounded-full bg-zinc-600"></span>
+                        </div>
+                        <span class="text-[11px] text-zinc-500 font-normal font-geist"></span>
+                      </div>
+                      <div class="flex-1 flex flex-col bg-[url('images/3d.png')] bg-contain bg-no-repeat bg-center rounded-lg mt-2 mb-2 pt-6 pb-6 items-center justify-center">
+
+                      </div>
+                      <div class="mt-auto">
+                        <h3 class="text-[15px] sm:text-base font-medium leading-snug tracking-tight text-zinc-100 font-geist">
+                          Performance at a Glance</h3>
+                        <p class="mt-1 text-sm text-zinc-400 font-geist">Monitor engagement, quiz results, and content mastery in one view.
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section id="waitlist" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="overflow-hidden p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-neutral-900/70 to-neutral-900/40 border-white/10 border rounded-2xl sm:rounded-3xl mt-8 sm:mt-16">
+        <div class="grid gap-6 lg:gap-8 lg:grid-cols-2">
+          <div class="">
+            <h3 class="text-2xl tracking-tighter font-sans" style="">Be First to Experience Natraj</h3>
+            <p class="mt-2 max-w-lg text-sm text-neutral-300 font-sans">
+              Join the early access list and explore the world’s most powerful AI+AR model for human anatomy. We’ll notify you as soon as spots open no spam, just updates and exclusive invites.
+            </p>
+            <form class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <label class="sr-only font-sans" for="email">Email</label>
+              <input id="email" type="email" required="" placeholder="Enter your email address"  class="w-full placeholder-neutral-500 focus:border-neutral-400/40 focus:outline-none focus:ring-2 focus:ring-neutral-300/30 text-sm text-white bg-neutral-950/60 border-white/10 border rounded-xl py-3 px-4 min-h-[44px]">
+              <button id="waitlist-btn" type="button" class="group relative inline-flex shadow-[0_8px_16px_-4px_rgba(255,255,255,0.05)] hover:shadow-[0_12px_20px_-6px_rgba(255,255,255,0.1)] transition duration-300 ease-out select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 transform-gpu hover:-translate-y-0.5 text-white pt-[1px] pr-[1px] pb-[1px] pl-[1px] items-center justify-center rounded-xl" style="background-image: linear-gradient(144deg,rgba(255,255,255,0.3), rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2));">
+                <span class="flex items-center justify-center gap-2 text-[15px] leading-none min-w-[140px] w-full h-full transition-colors duration-300 group-hover:bg-black/50 font-medium bg-black/80 rounded-xl pt-3 pr-5 pb-3 pl-5">
+                  <span class="rounded-xl">Request</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 rounded-xl">
+                    <path d="M5 12h14" class="rounded-xl"></path>
+                    <path d="m12 5 7 7-7 7" class="rounded-xl"></path>
+                  </svg>
+                </span>
+              </button>
+            </form>
+            <p class="mt-2 text-xs text-neutral-500 font-sans">
+              By signing up, you agree to our <a href="https://navchetna.tech/privacy" class="text-orange-300 hover:text-orange-200 transition-colors">terms</a> and privacy policy.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="relative h-56 w-full overflow-hidden sm:h-64 bg-neutral-950 border-white/10 border rounded-2xl">
+              <img src="images/loading.jpg" alt="Minimal landscape" class="absolute inset-0 h-full w-full opacity-70 object-cover" style="">
+              <div class="absolute inset-0 bg-gradient-to-tr from-neutral-400/20 via-transparent to-neutral-500/10" style="display: block;"></div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Success Card -->
+    <div id="success-card" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div class="card-top glass-effect w-full max-w-md overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+        <div class="absolute inset-0 border-white/20 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, white, transparent 60%)"></div>
+        <div class="absolute
+        
+        inset-0 border-white/10 border rounded-[1.2em]" style="mask-image: linear-gradient(135deg, transparent 60%, white)"></div>
+        
+        <button id="close-x" class="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors duration-300 z-10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+            <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+          </svg>
+        </button>
+        
+        <div class="p-6 text-center">
+          <div class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-orange-300 to-orange-400 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-white">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          </div>
+          
+          <h3 class="text-xl font-semibold tracking-tight text-white mb-2">Successfully Registered!</h3>
+          <p class="text-sm text-neutral-300 mb-6 font-sans">
+            Welcome to Natraj! You're now on our early access list. We'll notify you as soon as it launches.
+          </p>
+          
+          <button id="close-success" class="w-full group relative inline-flex shadow-[0_8px_16px_-4px_rgba(255,255,255,0.05)] hover:shadow-[0_12px_20px_-6px_rgba(255,255,255,0.1)] transition duration-300 ease-out select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 transform-gpu hover:-translate-y-0.5 text-white pt-[1px] pr-[1px] pb-[1px] pl-[1px] items-center justify-center rounded-xl" style="background-image: linear-gradient(144deg,rgba(255,255,255,0.3), rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2));">
+            <span class="flex items-center justify-center gap-2 text-[15px] leading-none w-full h-full transition-colors duration-300 group-hover:bg-black/50 font-medium bg-black/80 rounded-xl pt-3 pr-5 pb-3 pl-5">
+              Continue Exploring
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function toggleFAQ(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+      
+      function showSuccessCard() {
+        document.getElementById('success-card').classList.remove('hidden');
+      }
+      
+      function hideSuccessCard() {
+        document.getElementById('success-card').classList.add('hidden');
+      }
+      
+      // Close success card when clicking buttons or outside
+      document.addEventListener('click', (e) => {
+        const successCard = document.getElementById('success-card');
+        const closeBtn = document.getElementById('close-success');
+        const closeX = document.getElementById('close-x');
+        
+        if (e.target === successCard || closeX.contains(e.target)) {
+          hideSuccessCard();
+        }
+        
+        if (e.target === closeBtn || closeBtn.contains(e.target)) {
+          hideSuccessCard();
+          // Scroll to top of page (hero section)
+          document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mt-8 sm:mt-16 mx-auto px-4 sm:px-6 pb-8 sm:pb-12">
+      <div class="p-6 sm:p-8 lg:p-16 border-white/10 border rounded-2xl sm:rounded-3xl backdrop-blur-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-16">
+          <div class="lg:col-span-1">
+            <div class="flex items-center mb-6">
+              <img src="assets/NAVCHETNA.svg" alt="NAVCHETNA" class="h-6 w-auto">
+            </div>
+            <p class="leading-relaxed text-sm text-white/60 mb-8 font-sans">
+              Operationalize AI with reliable, trustworthy inference. Join the waitlist to get early access to our
+              secure platform.
+            </p>
+            
+          </div>
+          <div class="">
+            <h4 class="text-sm font-medium text-white mb-6 uppercase tracking-wide font-sans">About</h4>
+            <ul class="space-y-4">
+              <li class="">
+                <a href="https://osmium.co.in/about/" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">
+                  Our story</a>
+              </li>
+              <li class="">
+                <a href="https://navchetna.tech/news" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">
+                  Blogs</a>
+              </li>
+             
+            </ul>
+          </div>
+          <div class="">
+            <h4 class="text-sm font-medium text-white mb-6 uppercase tracking-wide font-sans">API</h4>
+            <ul class="space-y-4">
+              <li class="">
+                <a href="https://doc.navchetna.tech/?p=Natraj&api=Vigrah&v=0.1.0" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">Vigrah
+                  </a>
+              </li>
+              <li class="">
+                <a href="https://doc.navchetna.tech/?p=Natraj&api=Mudra&v=0.1.0" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">Mudra
+                  </a>
+              </li>
+             
+            </ul>
+          </div>
+          <div class="">
+            <h4 class="text-sm font-medium text-white mb-6 uppercase tracking-wide font-sans">Connect</h4>
+            <ul class="space-y-4">
+               <li class="">
+                <a href="https://x.com/Navchetna_labs" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">X</a>
+              </li>
+              <li class="">
+                <a href="https://www.linkedin.com/company/navchetna/" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">linkedin</a>
+              </li>
+              <li class="">
+                <a href="https://www.instagram.com/osmium_ai/" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">Instagram</a>
+              </li>
+              
+               <li class="">
+                <a href="https://navchetna.tech/contact" class="text-sm text-white/60 hover:text-white transition-colors duration-300 font-sans">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="footer-signup" class="border-white/10 border-t mb-8 sm:mb-12 pt-8 sm:pt-12">
+          <div class="max-w-2xl text-center mx-auto">
+            <h4 class="text-base sm:text-lg font-medium text-white mb-4">Stay up to date</h4>
+            <p class="text-xs sm:text-sm text-white/60 mb-6">Get the latest updates on platform features, model releases, and
+              enterprise AI best practices.</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <input id="footer-email" type="email" placeholder="Enter your email address" class="flex-1 max-w-md placeholder-white/40 focus:border-neutral-400/40 focus:outline-none transition-all duration-300 text-sm text-white bg-white/5 border-white/10 border rounded-xl py-3 px-4 min-h-[44px]">
+              <button id="footer-subscribe" type="button" role="button" aria-label="Create Account" class="group relative inline-flex shadow-[0_8px_16px_-4px_rgba(255,255,255,0.05)] hover:shadow-[0_12px_20px_-6px_rgba(255,255,255,0.1)] transition duration-300 ease-out select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 transform-gpu hover:-translate-y-0.5 text-white pt-[1px] pr-[1px] pb-[1px] pl-[1px] items-center justify-center rounded-xl" style="background-image: linear-gradient(144deg,rgba(255,255,255,0.3), rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2));">
+                <span class="flex items-center justify-center gap-2 text-[15px] leading-none min-w-[140px] w-full h-full transition-colors duration-300 group-hover:bg-black/50 font-medium bg-black/80 rounded-xl pt-3 pr-5 pb-3 pl-5">
+                  <span class="rounded-xl">Subscribe</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 rounded-xl">
+                    <path d="M5 12h14" class="rounded-xl"></path>
+                    <path d="m12 5 7 7-7 7" class="rounded-xl"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 text-xs text-white/40">
+            <span class="font-sans">© 2025 Natraj. All rights reserved.</span>
+            <a href="https://navchetna.tech/privacy" class="hover:text-white/60 transition-colors duration-300 font-sans">Privacy Policy</a>
+            <a href="https://navchetna.tech/term" class="hover:text-white/60 transition-colors duration-300 font-sans">Terms of Service</a>
+          </div>
+          <div class="flex items-center gap-3 sm:gap-4 text-xs text-white/40">
+          
+           
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+      const year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
+      
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      }
+      
+      // Subscribe functionality
+      const subscribeBtn = document.getElementById('footer-subscribe');
+      const emailInput = document.getElementById('footer-email');
+      
+      if (subscribeBtn && emailInput) {
+        subscribeBtn.addEventListener('click', async () => {
+          const email = emailInput.value.trim();
+          if (!email || !email.includes('@')) {
+            alert('Please enter a valid email address');
+            return;
+          }
+          
+          subscribeBtn.disabled = true;
+          const textSpan = subscribeBtn.querySelector('span span');
+          if (textSpan) textSpan.textContent = 'Sending...';
+          
+          try {
+            const response = await fetch('https://dq634igj5swh4s4th7t4prxga40ezczf.lambda-url.us-east-1.on.aws/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, website: 'natraj' })
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+              showSuccessCard();
+              emailInput.value = '';
+            } else {
+              alert('Failed to subscribe: ' + (result.message || 'Unknown error'));
+            }
+          } catch (error) {
+            console.error('Subscription error:', error);
+            alert('Failed to subscribe. Please try again.');
+          } finally {
+            subscribeBtn.disabled = false;
+            if (textSpan) textSpan.textContent = 'Subscribe';
+          }
+        });
+      }
+      
+      // Waitlist functionality
+      const waitlistBtn = document.getElementById('waitlist-btn');
+      const waitlistEmail = document.getElementById('email');
+      
+      if (waitlistBtn && waitlistEmail) {
+        waitlistBtn.addEventListener('click', async () => {
+          const email = waitlistEmail.value.trim();
+          if (!email || !email.includes('@')) {
+            alert('Please enter a valid email address');
+            return;
+          }
+          
+          waitlistBtn.disabled = true;
+          const textSpan = waitlistBtn.querySelector('span span');
+          if (textSpan) textSpan.textContent = 'Joining...';
+          
+          try {
+            const response = await fetch('https://dq634igj5swh4s4th7t4prxga40ezczf.lambda-url.us-east-1.on.aws/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, website: 'natraj' })
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+              showSuccessCard();
+              waitlistEmail.value = '';
+            } else {
+              alert('Failed to join waitlist: ' + (result.message || 'Unknown error'));
+            }
+          } catch (error) {
+            console.error('Waitlist error:', error);
+            alert('Failed to join waitlist. Please try again.');
+          } finally {
+            waitlistBtn.disabled = false;
+            if (textSpan) textSpan.textContent = 'Request';
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
