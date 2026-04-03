@@ -118,7 +118,7 @@ export default function HeroNew() {
 
             {/* CTA buttons */}
             <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 mb-6 w-full sm:w-auto items-center">
-              <a href="#find-tutor" aria-label="Find Your Tutor">
+              <a href="/find-tutor" aria-label="Find Your Tutor">
                 <button className="inline-flex items-center justify-center cursor-pointer font-matter font-medium rounded-full px-6 py-3 text-base bg-[#131313] text-white transition-opacity duration-200 hover:opacity-75 active:scale-95">
                   Find Your Tutor
                 </button>

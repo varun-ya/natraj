@@ -19,7 +19,7 @@ export default function AboutSection() {
                     </span>
                     <h2 className="font-season-mix text-4xl md:text-[54px] text-black leading-[1.05] tracking-tight">
                         Not just tutoring.<br />
-                        <span style={{ color: '#F97316' }}>Personalised</span> learning.
+                        <span style={{ color: '#fdeee3ff' }}>Personalised</span> learning.
                     </h2>
                 </div>
                 <div className="flex flex-col gap-6 flex-1 md:pt-14">
