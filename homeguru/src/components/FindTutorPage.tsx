@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { ChevronDown, Check } from "lucide-react";
+import { ChevronDown, Check, UserCheck, Users, BookOpen, Star, GraduationCap, Trophy, Medal, Award } from "lucide-react";
 
 const TUTORS = [
   { id: 1, name: "Aarav Sharma", avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Aarav", subject: "Mathematics", category: "Academic", level: "Expert", rating: 4.9, reviews: 128, price: 800, students: 342, sessions: 1200, language: "English", speaks: ["English (Native)", "Hindi (Fluent)"], badge: "Super Tutor", bookings: "Booked 20+ times recently", headline: "JEE & Board Maths Specialist | IIT Delhi Graduate | 8+ Years", bio: "I'm passionate about making Mathematics simple and enjoyable. My teaching methodology focuses on conceptual clarity and problem-solving skills that help students crack JEE and board exams.", specialties: ["JEE Maths", "Calculus", "Algebra", "Trigonometry"] },
@@ -143,7 +143,7 @@ export default function FindTutorPage() {
   );
 
   return (
-    <div style={{ minHeight: "100vh", background: "#FAFAFA", overflowX: "hidden" }}>
+    <div style={{ minHeight: "100vh", background: "#FAFAFA" }}>
 
       {/* ── Hero / Search Header ── */}
       <section className="find-tutor-hero" style={{ paddingTop: "140px", paddingBottom: "40px", textAlign: "center", position: "relative" }}>
@@ -186,11 +186,55 @@ export default function FindTutorPage() {
       </section>
 
       {/* ── Main Twitter-style Layout ── */}
-      <section className="find-tutor-content" style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 16px 80px", display: "flex", gap: "24px", alignItems: "flex-start", justifyContent: "center", width: "100%", boxSizing: "border-box" }}>
+      <section className="find-tutor-content" style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 16px 80px", display: "flex", gap: "24px", alignItems: "stretch", justifyContent: "center", width: "100%", boxSizing: "border-box" }}>
 
-        {/* LEFT NAV (Hidden on Mobile) */}
-        {/* Left Spacer for Centering */}
-        <div style={{ width: "240px", display: "none" }} className="desktop-spacer" />
+        {/* LEFT: Sticky Video Section (desktop only) */}
+        <div style={{ width: "300px", display: "none", flexShrink: 0, alignSelf: "stretch" }} className="desktop-spacer">
+          <div style={{ position: "sticky", top: "120px", display: "flex", flexDirection: "column", gap: "16px" }}>
+            {/* Intro Video */}
+            <div style={{ background: "#fff", border: "1px solid #EBEBEB", borderRadius: "16px", overflow: "hidden", boxShadow: "0 1px 2px rgba(0,0,0,0.05)" }}>
+              <div style={{ position: "relative", paddingBottom: "62%", height: 0 }}>
+                <iframe
+                  src="https://www.youtube.com/embed/Ysqu3es1NyE?si=o4sSFMGKLU40xBR5"
+                  title="HomeGuru - Introduction"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none", borderRadius: "16px 16px 0 0" }}
+                />
+              </div>
+              <div style={{ padding: "14px 16px" }}>
+                <div className="font-season-mix" style={{ fontSize: "15px", fontWeight: 700, color: "#111", lineHeight: 1.3 }}>Welcome to HomeGuru</div>
+                <div className="font-season-mix" style={{ fontSize: "13px", color: "#888", marginTop: "4px" }}>See how 1-on-1 tutoring works</div>
+              </div>
+            </div>
+
+            {/* Quick Stats */}
+            <div style={{ background: "#fff", border: "1px solid #EBEBEB", borderRadius: "16px", padding: "18px 20px", boxShadow: "0 1px 2px rgba(0,0,0,0.05)" }}>
+              <div className="font-season-mix" style={{ fontSize: "15px", fontWeight: 700, color: "#111", marginBottom: "14px" }}>Platform Stats</div>
+              {[
+                { icon: <UserCheck size={15} color="#F97316" />, label: "Active Tutors", value: "50+" },
+                { icon: <Users size={15} color="#F97316" />, label: "Students Enrolled", value: "2,500+" },
+                { icon: <BookOpen size={15} color="#F97316" />, label: "Sessions Completed", value: "10,000+" },
+                { icon: <Star size={15} color="#F97316" fill="#F97316" />, label: "Avg. Rating", value: "4.8 / 5.0" },
+              ].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 0", borderBottom: i < 3 ? "1px solid #F3F4F6" : "none" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    {item.icon}
+                    <span className="font-season-mix" style={{ fontSize: "13px", color: "#666" }}>{item.label}</span>
+                  </div>
+                  <span className="font-season-mix" style={{ fontSize: "13px", fontWeight: 700, color: "#111" }}>{item.value}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Card */}
+            <div style={{ background: "linear-gradient(135deg, #0A2156 0%, #1e3a8a 100%)", borderRadius: "16px", padding: "20px", color: "#fff" }}>
+              <div className="font-season-mix" style={{ fontSize: "16px", fontWeight: 700, marginBottom: "8px" }}><span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>Become a Tutor <GraduationCap size={18} /></span></div>
+              <p className="font-season-mix" style={{ fontSize: "13px", color: "rgba(255,255,255,0.7)", margin: "0 0 14px", lineHeight: 1.5 }}>Share your expertise and earn on your own schedule.</p>
+              <button className="font-season-mix" style={{ width: "100%", padding: "10px 0", borderRadius: "99px", border: "1.5px solid #EBEBEB", background: "#fff", color: "#111", fontSize: "14px", fontWeight: 700, cursor: "pointer", transition: "all 0.2s" }} onMouseEnter={e => { e.currentTarget.style.background = "#FFF7F0"; e.currentTarget.style.color = "#F97316"; e.currentTarget.style.borderColor = "#F97316"; }} onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.color = "#111"; e.currentTarget.style.borderColor = "#EBEBEB"; }}>Apply Now →</button>
+            </div>
+          </div>
+        </div>
 
         {/* ── CENTER: Tutor List ── */}
         <div className="tutor-center-col" style={{ flex: 1, maxWidth: "660px", minWidth: 0, width: "100%" }}>
@@ -626,8 +670,7 @@ export default function FindTutorPage() {
         <aside className="hg-filter-panel" style={{ 
           width: "320px", 
           flexShrink: 0, 
-          position: "sticky", 
-          top: "80px", 
+          position: "relative", 
           display: "flex", 
           flexDirection: "column", 
           gap: "24px",
@@ -669,14 +712,14 @@ export default function FindTutorPage() {
           {/* ── Top Tutors ── */}
           <div style={{ background: "#fff", borderRadius: "16px", border: "1px solid #EBEBEB", boxShadow: "0 1px 2px rgba(0,0,0,0.05)" }}>
             <div style={{ padding: "18px 20px", borderBottom: "1px solid #F3F4F6", display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ fontSize: "22px" }}>🏆</span>
+              <Trophy size={20} color="#F97316" />
               <span className="font-season-mix" style={{ fontSize: "20px", fontWeight: 700, color: "#111" }}>Top Tutors</span>
             </div>
             {[
-              { rank: "🥇", name: "Ravi Kumar", subject: "Guitar", students: 156, rating: 5, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Ravi" },
-              { rank: "🥈", name: "Aarav Sharma", subject: "Mathematics", students: 342, rating: 4.9, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Aarav" },
-              { rank: "🥉", name: "Vikram Joshi", subject: "Physics", students: 290, rating: 4.9, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Vikram" },
-              { rank: "🏅", name: "Sneha Patel", subject: "IELTS English", students: 480, rating: 4.7, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Sneha" },
+              { rank: <Trophy size={16} color="#FFD700" />, name: "Ravi Kumar", subject: "Guitar", students: 156, rating: 5, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Ravi" },
+              { rank: <Medal size={16} color="#C0C0C0" />, name: "Aarav Sharma", subject: "Mathematics", students: 342, rating: 4.9, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Aarav" },
+              { rank: <Medal size={16} color="#CD7F32" />, name: "Vikram Joshi", subject: "Physics", students: 290, rating: 4.9, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Vikram" },
+              { rank: <Award size={16} color="#F97316" />, name: "Sneha Patel", subject: "IELTS English", students: 480, rating: 4.7, avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Sneha" },
             ].map((tutor, idx) => (
               <div
                 key={idx}
@@ -693,14 +736,14 @@ export default function FindTutorPage() {
                 onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
-                  <span style={{ fontSize: "20px", width: "24px", textAlign: "center" }}>{tutor.rank}</span>
+                  <span style={{ width: "24px", display: "flex", alignItems: "center", justifyContent: "center" }}>{tutor.rank}</span>
                   <img src={tutor.avatar} alt={tutor.name} style={{ width: 44, height: 44, borderRadius: "50%", objectFit: "cover", border: "1.2px solid #EBEBEB" }} />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div className="font-season-mix" style={{ fontSize: "16px", fontWeight: 700, color: "#111", lineHeight: 1.3 }}>{tutor.name}</div>
                   <div className="font-season-mix" style={{ fontSize: "13px", color: "#888", marginTop: "3px" }}>{tutor.subject} · {tutor.students} students</div>
                   <div className="font-season-mix" style={{ fontSize: "13px", color: "#F97316", fontWeight: 700, marginTop: "4px", display: "flex", alignItems: "center", gap: "3px" }}>
-                    <span>⭐</span> {tutor.rating}
+                    <Star size={13} color="#F97316" fill="#F97316" /> {tutor.rating}
                   </div>
                 </div>
               </div>
@@ -749,7 +792,8 @@ export default function FindTutorPage() {
           -webkit-overflow-scrolling: touch;
         }
         .hg-tabs-bar::-webkit-scrollbar { display: none; }
-        .desktop-spacer, .hg-filter-panel { display: none !important; }
+        .desktop-spacer { display: none !important; }
+        .hg-filter-panel { display: none !important; }
 
         @media (max-width: 1023px) {
           .find-tutor-content { justify-content: center !important; }
@@ -764,7 +808,8 @@ export default function FindTutorPage() {
         }
 
         @media (min-width: 1024px) {
-          .desktop-spacer { display: block !important; margin-right: 12px; }
+          .desktop-spacer { display: block !important; }
+          .desktop-spacer::-webkit-scrollbar { display: none; }
           .hg-filter-panel { display: flex !important; margin-left: 12px; }
           .hg-tabs-bar { flex-wrap: wrap !important; overflow-x: visible !important; }
         }
