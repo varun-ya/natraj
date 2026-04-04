@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeacherProfilePage from '../components/TeacherProfilePage';
+---
+
+<Layout title="Teacher Profile | HomeGuru">
+  <main class="z-100 flex-1 bg-[#fafafa] relative flex flex-col" style="font-family: Matter, sans-serif;">
+    <TeacherProfilePage client:load />
+  </main>
+</Layout>
