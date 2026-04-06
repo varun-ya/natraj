@@ -1,33 +1,80 @@
-# Habit Tracker MVP
+# HomeGuru Dashboard
 
-A production-ready Next.js application for tracking daily habits.
+A modern, responsive dashboard built with Next.js 15, TypeScript, and Tailwind CSS.
 
-## Tech Stack
+## Features
 
-- **Next.js 14** with App Router
-- **TypeScript** for type safety
-- **Tailwind CSS** for styling
-- **ESLint + Prettier** for code quality
+- 📊 Dashboard with multiple widgets
+- 📅 Learning activity calendar
+- 📚 Upcoming schedule
+- 📝 Pending assignments
+- 📈 Learning hours chart
+- 👨‍🏫 Trending teachers
+- 🎯 Learning quest challenges
+- 📱 Fully responsive design
 
 ## Getting Started
 
-1. Install dependencies:
+### Install Dependencies
+
 ```bash
 npm install
 ```
 
-2. Run the development server:
+### Run Development Server
+
 ```bash
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Scripts
+## Project Structure
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm run type-check` - Run TypeScript type checking
+```
+HomeGuru/
+├── app/
+│   ├── page.tsx          # Main dashboard page
+│   ├── layout.tsx        # Root layout
+│   └── globals.css       # Global styles
+├── components/
+│   ├── Sidebar.tsx
+│   ├── Header.tsx
+│   ├── Banner.tsx
+│   ├── StatsCards.tsx
+│   ├── LearningQuest.tsx
+│   ├── UpcomingSchedule.tsx
+│   ├── LearningActivity.tsx
+│   ├── PendingAssignments.tsx
+│   ├── LearningHours.tsx
+│   ├── ReviewLesson.tsx
+│   └── TrendingTeachers.tsx
+└── package.json
+```
+
+## Customization
+
+Each component is modular and can be easily customized:
+
+1. **Colors**: Modify Tailwind classes in components
+2. **Layout**: Adjust grid columns in `app/page.tsx`
+3. **Data**: Replace mock data with API calls
+4. **Icons**: Using lucide-react icons (easily replaceable)
+
+## Technologies
+
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## License
+
+MIT
