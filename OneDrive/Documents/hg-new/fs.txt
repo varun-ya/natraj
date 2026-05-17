@@ -1,0 +1,127 @@
+src/
+├── components/
+│   ├── teacher/                          # 🆕 Teacher-specific components
+│   │   │
+│   │   ├── home/                         # 1️⃣ Home (Dashboard)
+│   │   │   ├── TeacherHome.tsx          # Main dashboard page
+│   │   │   ├── WelcomeCard.tsx          # Welcome banner
+│   │   │   ├── QuickStatsCard.tsx       # Quick stats (students, earnings, sessions)
+│   │   │   ├── UpcomingClassesCard.tsx  # Next 3 classes widget
+│   │   │   ├── RecentActivityCard.tsx   # Recent activity feed
+│   │   │   └── teacherHomeData.ts       # Mock home data
+│   │   │
+│   │   ├── my-learners/                  # 2️⃣ My Learners
+│   │   │   ├── MyLearnersPage.tsx       # Main learners page
+│   │   │   ├── LearnerCard.tsx          # Individual learner card
+│   │   │   ├── LearnerDetailSheet.tsx   # Learner detail modal
+│   │   │   ├── LearnerFilters.tsx       # Filter by subject/status
+│   │   │   ├── LearnerSearchBar.tsx     # Search learners
+│   │   │   ├── LearnerStats.tsx         # Learner statistics
+│   │   │   └── learnersData.ts          # Mock learners data
+│   │   │
+│   │   ├── schedule/                     # 3️⃣ Schedule
+│   │   │   ├── TeacherSchedulePage.tsx  # Teacher calendar view
+│   │   │   ├── TeacherCalendar.tsx      # Calendar component
+│   │   │   ├── ClassSessionCard.tsx     # Class session card
+│   │   │   ├── AvailabilitySheet.tsx    # Set availability modal
+│   │   │   ├── BlockTimeSheet.tsx       # Block time slots
+│   │   │   ├── RecurringClassSheet.tsx  # Set recurring classes
+│   │   │   └── teacherScheduleData.ts   # Mock schedule data
+│   │   │
+│   │   ├── guru-ai/                      # 4️⃣ Guru AI (Teacher version)
+│   │   │   ├── TeacherGuruAI.tsx        # Teacher AI assistant
+│   │   │   ├── LessonPlanGenerator.tsx  # AI lesson plan generator
+│   │   │   ├── QuizGenerator.tsx        # AI quiz generator
+│   │   │   ├── StudentInsights.tsx      # AI student insights
+│   │   │   └── teacherAIData.ts         # Mock AI data
+│   │   │
+│   │   ├── chat/                         # 5️⃣ Chat (Teacher view)
+│   │   │   ├── TeacherChatPage.tsx      # Teacher chat page
+│   │   │   ├── StudentConvoList.tsx     # Student conversations
+│   │   │   ├── GroupChatList.tsx        # Group chats
+│   │   │   └── teacherChatData.ts       # Mock chat data
+│   │   │
+│   │   ├── session-history/              # 6️⃣ Session History
+│   │   │   ├── TeacherSessionHistory.tsx # Teaching history page
+│   │   │   ├── SessionCard.tsx          # Session card
+│   │   │   ├── SessionDetailSheet.tsx   # Session details
+│   │   │   ├── SessionFilters.tsx       # Filter by date/subject
+│   │   │   ├── SessionStats.tsx         # Session statistics
+│   │   │   ├── AddNotesSheet.tsx        # Add session notes
+│   │   │   └── teacherHistoryData.ts    # Mock history data
+│   │   │
+│   │   ├── feed/                         # 7️⃣ Feed (Teacher view)
+│   │   │   ├── TeacherFeedPage.tsx      # Teacher feed page
+│   │   │   ├── CreatePostSheet.tsx      # Create educational post
+│   │   │   ├── TeacherPostCard.tsx      # Teacher post card
+│   │   │   └── teacherFeedData.ts       # Mock feed data
+│   │   │
+│   │   ├── payments-wallet/              # 8️⃣ Payments & Wallet
+│   │   │   ├── TeacherWalletPage.tsx    # Main wallet page
+│   │   │   ├── EarningsCard.tsx         # Total earnings card
+│   │   │   ├── PendingPaymentsCard.tsx  # Pending payments
+│   │   │   ├── PayoutHistoryCard.tsx    # Payout history
+│   │   │   ├── WithdrawSheet.tsx        # Withdraw money modal
+│   │   │   ├── BankDetailsSheet.tsx     # Bank details
+│   │   │   ├── TransactionList.tsx      # Transaction list
+│   │   │   ├── EarningsChart.tsx        # Earnings graph
+│   │   │   ├── PaymentBreakdown.tsx     # Payment breakdown
+│   │   │   └── teacherWalletData.ts     # Mock wallet data
+│   │   │
+│   │   └── ratings-feedback/             # 9️⃣ Ratings & Feedback
+│   │       ├── RatingsFeedbackPage.tsx  # Main ratings page
+│   │       ├── OverallRatingCard.tsx    # Overall rating display
+│   │       ├── RatingBreakdown.tsx      # Star breakdown chart
+│   │       ├── ReviewCard.tsx           # Individual review card
+│   │       ├── ReviewFilters.tsx        # Filter reviews
+│   │       ├── ResponseSheet.tsx        # Respond to review
+│   │       ├── RatingTrends.tsx         # Rating trends chart
+│   │       └── ratingsData.ts           # Mock ratings data
+│   │
+│   ├── onboarding/
+│   │   └── teacher-onboarding/          # ✅ Already exists
+│   │
+│   ├── booking/                          # ✅ Shared
+│   ├── chat/                             # ✅ Shared (base components)
+│   ├── feed/                             # ✅ Shared (base components)
+│   └── ...
+│
+├── app/
+│   └── [role]/
+│       └── dashboard/
+│           │
+│           ├── home/                     # 1️⃣ Home (Teacher)
+│           │   └── page.tsx
+│           │
+│           ├── my-learners/              # 2️⃣ My Learners
+│           │   └── page.tsx
+│           │
+│           ├── schedule/                 # 3️⃣ Schedule
+│           │   └── page.tsx
+│           │
+│           ├── guru-ai/                  # 4️⃣ Guru AI
+│           │   └── page.tsx
+│           │
+│           ├── chat/                     # 5️⃣ Chat
+│           │   └── page.tsx
+│           │
+│           ├── session-history/          # 6️⃣ Session History
+│           │   └── page.tsx
+│           │
+│           ├── feed/                     # 7️⃣ Feed
+│           │   └── page.tsx
+│           │
+│           ├── payments-wallet/          # 8️⃣ Payments & Wallet
+│           │   └── page.tsx
+│           │
+│           ├── ratings-feedback/         # 9️⃣ Ratings & Feedback
+│           │   └── page.tsx
+│           │
+│           ├── layout.tsx                # Dashboard layout
+│           └── page.tsx                  # Redirects to /home
+│
+├── data/
+│   └── teacherData.ts                    # 🆕 Teacher global data
+│
+└── lib/
+    └── teacherUtils.ts                   # 🆕 Teacher utility functions
